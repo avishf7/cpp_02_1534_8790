@@ -1,2 +1,7 @@
-﻿  main.cpp
+﻿  complex.cpp
+  main.cpp
+  rational.cpp
+  Generating Code...
+C:\Users\אבישי פרקש\OneDrive - g.jct.ac.il\מסמכים\GitHub\ffile.h\rational.cpp(37,27): warning C4018: '>': signed/unsigned mismatch
+C:\Users\אבישי פרקש\OneDrive - g.jct.ac.il\מסמכים\GitHub\ffile.h\complex.cpp(29): warning C4172: returning address of local variable or temporary: cNum
   cpp_02_1534_ 8790.vcxproj -> C:\Users\אבישי פרקש\OneDrive - g.jct.ac.il\מסמכים\GitHub\ffile.h\x64\Debug\cpp_02_1534_ 8790.exe

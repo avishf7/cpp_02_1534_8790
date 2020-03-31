@@ -85,7 +85,7 @@ double convert(const Rational& rNUm)
 	return ((double)rNUm.numerator / rNUm.denominator);
 }
 
-Rational operator+(const Rational& r, const Rational& l)
+Rational operator+(const Rational& l, const Rational& r)
 {
 	Rational sum;
 
@@ -159,9 +159,9 @@ istream& operator>>(istream& in,  Rational& rNum)
 	in >> numerator >> denominator;
 
 	if (denominator == 0)
-		cout << "MATH ERROR";
+		cout << endl << "MATH ERROR" << endl;
 	else
-		(denominator > 0) ? rationalCtor(numerator, denominator) : rationalCtor(-numerator, -denominator);
+		(denominator > 0) ? rNum = rationalCtor(numerator, denominator) : rNum = rationalCtor(-numerator, -denominator);
 
 	return in;
 }

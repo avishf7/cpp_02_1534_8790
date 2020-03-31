@@ -97,7 +97,7 @@ int main(void) {
 			}
 			cout << endl;
 
-			cout << "Please choose a type: ";
+			cout << "Please choose an option: ";
 			cin >> type;
 
 			switch (type)
@@ -129,7 +129,7 @@ int main(void) {
 				cin >> rNum;
 				if (type < 0 || type>3)
 					cout << endl << "ERROR: index not found" << endl;
-				else
+				else if(rNum.denominator)
 					rNumbers[type] = rNum;
 				break;
 			case COMPLEX:
@@ -268,7 +268,7 @@ int main(void) {
 				cout << endl << "the sum of all decimal numbers is: " << dNum << endl;
 				break;
 			case RATIONAL:
-				rNum = {};
+				rNum = { 0,1 };
 				for (int i = 0; i < 4; i++)
 					rNum = rNum + rNumbers[i];
 				cout << endl << "the sum of all rational numbers is: " << rNum << endl;
@@ -277,7 +277,7 @@ int main(void) {
 				cNum = {};
 				for (int i = 0; i < 4; i++)
 					cNum = cNum + cNumbers[i];
-				cout << endl << "the sum of all complex numbers is: " << rNum << endl;
+				cout << endl << "the sum of all complex numbers is: " << cNum << endl;
 				break;
 			default:
 				cout << endl << "ERROR:illegal choice" << endl;
@@ -298,7 +298,7 @@ int main(void) {
 			//
 			for (type = FIRST_TYPE; type <= LAST_TYPE;
 				type++) {
-				cout << setw(menuIndent) << " " << type << " -- ";
+				cout << setw(menuIndent) << " " << type + 1 << " -- ";
 				cout << typesStrings[type] << endl;
 			}
 			cout << endl;
@@ -309,31 +309,28 @@ int main(void) {
 			switch (type)
 			{
 			case INT:
-				iNum = 0;
+				iNum = 1;
 				for (int i = 0; i < 4; i++)
 					iNum = iNum * iNumbers[i];
-				cout << endl << "the multiply of all integer  numbers is: " << iNum << endl;
-
-				//restart type to non-zero value to keep on the loop
-				type = 1;
+				cout << endl << "the multiply of all integer  numbers is: " << iNum << endl;	
 				break;
 			case DOUBLE:
-				dNum = 0;
+				dNum = 1;
 				for (int i = 0; i < 4; i++)
 					dNum = dNum * dNumbers[i];
 				cout << endl << "the multiply of all decimal numbers is: " << dNum << endl;
 				break;
 			case RATIONAL:
-				rNum = {};
+				rNum = { 1,1 };
 				for (int i = 0; i < 4; i++)
 					rNum = rNum * rNumbers[i];
 				cout << endl << "the multiply of all rational numbers is: " << rNum << endl;
 				break;
 			case COMPLEX:
-				cNum = {};
+				cNum = { 1,1 };
 				for (int i = 0; i < 4; i++)
 					cNum = cNum * cNumbers[i];
-				cout << endl << "the multiply of all complex numbers is: " << rNum << endl;
+				cout << endl << "the multiply of all complex numbers is: " << cNum << endl;
 				break;
 			default:
 				cout << endl << "ERROR:illegal choice" << endl;

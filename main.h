@@ -55,7 +55,7 @@ const char* const menuOptionStrings[] = {
 	"input type of number to spcific element",
 	"show all the elements of one type",
 	"calculate the sum of all numbers of the same type",
-	"Calculate the multiples of all numbers of the same type",
+	"calculate the multiples of all numbers of the same type",
 	"calculate the sum of two elements of the same type and placing the result in another",
 	"calculate the multiples of two elements of the same type and placing the result in another",
 	"calculate the difference of two elements of the same type and placing the result in another",

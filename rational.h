@@ -17,7 +17,7 @@ using namespace std;
 struct Rational
 {
 	int numerator;
-	uint denominator;
+	uint denominator = 0;
 };
 //The function accepts 2 numbers and returns the rational number
 //If the user entered only one number, the rational value would be initialized in the denominator to 1
