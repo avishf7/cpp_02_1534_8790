@@ -8,7 +8,7 @@ Students: eli iluz 311201354
 */
 
 #include "complex.h"
-
+using namespace std;
 
 Complex complexCtor(double real, double imaginary)
 {

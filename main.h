@@ -12,6 +12,8 @@ Students: eli iluz 311201354
 
 #include <iomanip>
 #include "common.h"
+#include "rational.h"
+#include <iostream>
 #include "complex.h"
 #include <ctime>
 

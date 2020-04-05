@@ -12,7 +12,6 @@ Students: eli iluz 311201354
 #include"mytypes.h"
 #include<iostream>
 #include<cmath>
-using namespace std;
 
 struct Rational
 {
@@ -78,10 +77,10 @@ bool operator ==(const Rational&, const Rational&);
 bool operator !=(const Rational&, const Rational&);
 
 //The function does operator overloading Of operation >>
-istream& operator >>(istream&,  Rational&);
+std::istream& operator >>(std::istream&,  Rational&);
 
 //The function does operator overloading Of operation >>
-ostream& operator <<(ostream&, const Rational&);
+std::ostream& operator <<(std::ostream&, const Rational&);
 
 
 #endif

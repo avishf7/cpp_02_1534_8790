@@ -7,6 +7,7 @@ Students: eli iluz 311201354
 		& avishay farkash 205918790
 */
 #include "rational.h"
+using namespace std;
 
 Rational rationalCtor(int numerator, uint denominator)
 {
@@ -158,11 +159,13 @@ istream& operator>>(istream& in,  Rational& rNum)
 	int numerator, denominator;
 	in >> numerator >> denominator;
 
-	if (denominator == 0)
-		cout << endl << "MATH ERROR" << endl;
-	else
+	if (denominator)
 		(denominator > 0) ? rNum = rationalCtor(numerator, denominator) : rNum = rationalCtor(-numerator, -denominator);
-
+	else
+	{
+		cout << endl << "MATH ERROR" << endl;
+		rNum.denominator = 0;
+	}
 	return in;
 }
 

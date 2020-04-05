@@ -9,6 +9,7 @@ Students: eli iluz 311201354
 #ifndef COMPLEX_H
 #define COMPLEX_H
 
+#include<iostream>
 #include"rational.h"
 
 struct Complex
@@ -70,8 +71,8 @@ bool operator ==(const Complex&, const Complex&);
 bool operator !=(const Complex&, const Complex&);
 
 //The function does operator overloading Of operation >>
-istream& operator >>(istream&, Complex&);
+std::istream& operator >>(std::istream&, Complex&);
 
 //The function does operator overloading Of operation <<
-ostream& operator <<(ostream&, const Complex&);
+std::ostream& operator <<(std::ostream&, const Complex&);
 #endif

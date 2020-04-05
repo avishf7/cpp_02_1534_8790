@@ -7,6 +7,7 @@ Students: eli iluz 311201354
 		& avishay farkash 205918790
 */
 #include "main.h"
+using namespace std;
 
 // Function main - this is the entry code for the program
 // It prints menu and performs the action according to the chosen option.
@@ -170,7 +171,7 @@ int main(void) {
 				cin >> rNum;
 				if (type < 0 || type>3)
 					cout << endl << "ERROR: index not found" << endl;
-				else
+				else if (rNum.denominator)
 					cNumbers[type] = complexCtor(rNum);
 				break;
 			default:
